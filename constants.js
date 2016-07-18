@@ -65,14 +65,14 @@ var csts = {
   CLUSTER_MODE_ID        : 'cluster_mode',
   FORK_MODE_ID           : 'fork_mode',
 
-  KEYMETRICS_ROOT_URL    : process.env.KEYMETRICS_NODE || 'root.keymetrics.io',
+  KEYMETRICS_ROOT_URL    : process.env.KEYMETRICS_NODE || '127.0.0.1',
   KEYMETRICS_BANNER      : '../lib/keymetrics',
   DEFAULT_MODULE_JSON    : 'package.json',
 
   REMOTE_PORT_TCP        : isNaN(parseInt(process.env.KEYMETRICS_PUSH_PORT)) ? 80 : parseInt(process.env.KEYMETRICS_PUSH_PORT),
   REMOTE_PORT            : 41624,
   REMOTE_REVERSE_PORT    : isNaN(parseInt(process.env.KEYMETRICS_REVERSE_PORT)) ? 43554 : parseInt(process.env.KEYMETRICS_REVERSE_PORT),
-  REMOTE_HOST            : 's1.keymetrics.io',
+  REMOTE_HOST            : process.env.KEYMETRICS_REMOTE_HOST || '127.0.0.1',
   SEND_INTERVAL          : 1000
 };
 
